@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Complaint Status</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Complaint Status</h2>
+        <p><strong>ID:</strong> {{ complaint[0] }}</p>
+        <p><strong>Name:</strong> {{ complaint[1] }}</p>
+        <p><strong>Issue:</strong> {{ complaint[2] }}</p>
+        <p><strong>Description:</strong> {{ complaint[3] }}</p>
+        <p><strong>Location:</strong> {{ complaint[4] }}</p>
+        <p><strong>Status:</strong> {{ complaint[5] }}</p>
+        <p><strong>Time:</strong> {{ complaint[6] }}</p>
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>

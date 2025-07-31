@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head><title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Admin Dashboard</h2>
+        <p><a href="/logout">Logout</a></p>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Issue</th>
+                <th>Description</th>
+                <th>Location</th>
+                <th>Status</th>
+                <th>Time</th>
+                <th>Actions</th>
+            </tr>
+            {% for row in complaints %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+                <td>{{ row[6] }}</td>
+                <td>
+                    <a href="/update_status/{{ row[0] }}/Resolved">Resolve</a> |
+                    <a href="/update_status/{{ row[0] }}/Rejected">Reject</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

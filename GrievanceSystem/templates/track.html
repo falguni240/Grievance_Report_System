@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Track Complaint</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Track Complaint</h2>
+        <form action="/track_result" method="POST">
+            <input name="complaint_id" placeholder="Complaint ID" required><br>
+            <input name="name" placeholder="Your Name" required><br>
+            <button type="submit">Track</button>
+        </form>
+    </div>
+</body>
+</html>
